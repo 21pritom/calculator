@@ -1,0 +1,60 @@
+import java.util.Scanner;
+public class calculator {
+    calculator(){
+        System.out.println("Choose operation:");
+        System.out.println("Addition +");
+        System.out.println("Subtraction -");
+        System.out.println("Multiplication *");
+        System.out.println("Division /");
+    }
+    private static String in;
+
+    static int sum(int a,int b) { //int a,int b paramiter pass korci
+    return a+b;
+    }
+
+    static int mi(int a,int b) {
+        return a-b;
+    }
+
+    static int mul(int a,int b) {
+        return a*b;
+    }
+    //c
+    static double dev(int a,int b) {
+        return (double) a/b;
+    }
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        new calculator();
+        System.out.println("enter the 1st number");
+
+        int e1s = input.nextInt();//input nici
+        System.out.println("enter the oparetor");
+        char in = input.next().charAt(0);
+        System.out.println("renter the 2nd number");
+        int e2s = input.nextInt();
+        System.out.println();
+        System.out.print("ANSWAR : ");
+
+        switch(in) {
+            case '+':
+                //function call
+                System.out.println(sum(e1s,e2s));
+                break;
+            case '-':
+
+                System.out.println(mi(e1s,e2s));
+                break;
+            case '*':
+
+                System.out.println(mul(e1s,e2s));
+                break;
+            case '/':
+
+                System.out.println(dev(e1s,e2s));
+        }
+        return;
+    }
+}
